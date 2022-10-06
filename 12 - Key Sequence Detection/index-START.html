@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Key Detection</title>
-  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
-</head>
-<body>
-<script>
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Key Detection</title>
+    <script
+      type="text/javascript"
+      src="https://www.cornify.com/js/cornify.js"
+    ></script>
+  </head>
+  <body>
+    <script>
+      // Get our elements
+      const player = document.querySelector('.player');
+      const video = player.querySelector('.viewer');
+      const progress = player.querySelector('.progress');
+      const progressBar = player.querySelector('.progress__filled');
+      const toggle = player.querySelector('.toggle');
+      const skipButtons = player.querySelector('[data-skip');
+      const ranges = player.querySelector('.player__slider');
+
+      // Build out our functions
+
+      function togglePlay() {
+        const method = video.paused ? 'play' : 'pause';
+        video[method]();
+      }
+
+      // event listeners
+      video.addEventListener('click', togglePlay());
+    </script>
+  </body>
 </html>

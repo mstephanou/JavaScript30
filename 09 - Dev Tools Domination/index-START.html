@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Console Tricks!</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
-  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+    <script>
+      const dogs = [
+        { name: 'Snickers', age: 2 },
+        { name: 'hugo', age: 8 },
+      ];
 
-  <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+      function makeGreen() {
+        const p = document.querySelector('p');
+        p.style.color = '#BADA55';
+        p.style.fontSize = '50px';
+      }
 
-    function makeGreen() {
-      const p = document.querySelector('p');
-      p.style.color = '#BADA55';
-      p.style.fontSize = '50px';
-    }
+      // Regular
+      console.log('hi');
+      // Interpolated
+      console.log('hi, i am a  %s string!', '💩');
+      // Styled
 
-    // Regular
+      // warning!
+      console.error('Whoops!');
+      // Error :|
+      console.error('Fuck!');
 
-    // Interpolated
+      // Info
+      console.info('Crocodiles eat 3-4 people per year.');
+      // Testing
 
-    // Styled
+      // clearing
+      //! console.clear()
 
-    // warning!
+      // Viewing DOM Elements
+      console.log(p);
+      console.dir(p);
 
-    // Error :|
+      // Grouping together
 
-    // Info
+      // counting
+      console.count('Mike');
+      console.count('Mike');
+      console.count('Horatio');
+      console.count('Mike');
+      console.count('Mike');
+      console.count('Mike');
+      console.count('Mike');
+      console.count('Mike');
+      console.count('Abigail');
+      console.count('Mike');
 
-    // Testing
-
-    // clearing
-
-    // Viewing DOM Elements
-
-    // Grouping together
-
-    // counting
-
-    // timing
-
-  </script>
-</body>
+      // timing
+    </script>
+  </body>
 </html>
