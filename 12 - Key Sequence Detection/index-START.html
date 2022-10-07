@@ -10,24 +10,22 @@
   </head>
   <body>
     <script>
-      // Get our elements
-      const player = document.querySelector('.player');
-      const video = player.querySelector('.viewer');
-      const progress = player.querySelector('.progress');
-      const progressBar = player.querySelector('.progress__filled');
-      const toggle = player.querySelector('.toggle');
-      const skipButtons = player.querySelector('[data-skip');
-      const ranges = player.querySelector('.player__slider');
+      const pressed = [];
+      const secretCode = 'banana';
 
-      // Build out our functions
-
-      function togglePlay() {
-        const method = video.paused ? 'play' : 'pause';
-        video[method]();
-      }
-
-      // event listeners
-      video.addEventListener('click', togglePlay());
+      window.addEventListener('keyup', (e) => {
+        console.log(e.key);
+        pressed.push(e.key);
+        pressed.splice(
+          -secretCode.length - 1,
+          pressed.length - secretCode.length
+        );
+        if (pressed.join('').includes(secretCode)) {
+          console.log('YOU DID IT');
+          cornify_add();
+        }
+        console.log(pressed);
+      });
     </script>
   </body>
 </html>
